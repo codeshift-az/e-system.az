@@ -4,6 +4,7 @@ import About from "./sections/AboutArea";
 import Banner from "./sections/Banner";
 import Blog from "./sections/Blog";
 import ChooseUsArea from "./sections/ChooseUsArea";
+import Clients from "./sections/Clients";
 import Features from "./sections/Features";
 import FunFactorArea from "./sections/FunFactorArea";
 import Pricing from "./sections/Pricing";
@@ -15,6 +16,7 @@ function Home() {
     <Layout>
       <div className="wrapper">
         <Banner />
+        <Clients />
         <About />
         <SubscribeArea />
         <Features />

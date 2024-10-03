@@ -16,6 +16,13 @@ export { default as BannerBackground } from "./home/banner/25.png";
 export { default as BannerBackground2 } from "./home/banner/26.png";
 export { default as BannerBackground3 } from "./home/banner/18.png";
 
+// Clients Area
+
+export {default as PartnerLogo1} from "./logo/1.png"
+export {default as PartnerLogo2} from "./logo/2.png"
+export {default as PartnerLogo3} from "./logo/3.png"
+export {default as PartnerLogo4} from "./logo/4.png"
+export {default as PartnerLogo5} from "./logo/5.png"
 
 // AboutArea
 export { default as AboutShape } from "./home/aboutArea/9.png";
