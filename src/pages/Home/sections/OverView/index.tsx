@@ -1,13 +1,12 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import { useRef, useState } from "react";
+// swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-// import required modules
 import { Pagination } from "swiper/modules";
+// swiper
 import { SlideImg1, SlideImg2, SlideImg3 } from "@/assets/images";
+import { Link } from "react-router-dom";
 
 interface SlideData {
   text: string;
@@ -16,10 +15,13 @@ interface SlideData {
 
 function OverView() {
   const swiperRef = useRef<any | null>(null);
+  const [currentSliderIndex, setCurrentSliderIndex] = useState<number>();
 
-const handlePaghinationButton=(index:number)=>{
-    swiperRef.current.swiper.slideTo(index)
-}
+  const goToSlide = (index: number) => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideTo(index);
+    }
+  };
 
   const slideData: SlideData[] = [
     {
@@ -60,52 +62,60 @@ const handlePaghinationButton=(index:number)=>{
         <div className="row">
           <div className="col-lg-12">
             <div className="">
-              {/* Swiper */}
               <Swiper
                 ref={swiperRef}
+                onSwiper={(swiper) => setCurrentSliderIndex(swiper.activeIndex)}
+                onSlideChange={(swiper) => setCurrentSliderIndex(swiper.activeIndex)}
                 breakpoints={{
-                    1025:{
-                        slidesPerView:2
-                    },
-                    1024:{
-                        slidesPerView:1
-                    },
+                  1025: {
+                    slidesPerView: 1.5,
+                  },
+                  1024: {
+                    slidesPerView: 1,
+                  },
                 }}
-                // centeredSlides={true}
                 spaceBetween={20}
-                grabCursor={true}
-                pagination={{
-                  clickable: true,
-                }}
+                loop
                 modules={[Pagination]}
                 className="mySwiper"
-                style={{ padding: 0 }}
               >
-                {slideData.map((slide, index) => (
+              {
+                slideData.map((slide, index) => (
                   <SwiperSlide className="" key={index}>
                     <div className="item p-0 m-0">
                       <div className="thumb">
                         <img src={slide.img} alt="Thumb" />
-                        <a
-                          href=""
+                        <Link
+                          to=""
                           className="item popup-gallery theme video-play-button"
                         >
                           <i className="fa fa-plus" />
-                        </a>
+                        </Link>
                       </div>
                       <div className="content">
                         <h4>
-                          <span>0{index+1}</span> {slide.text}
+                          <span>0{index + 1}</span> {slide.text}
                         </h4>
                       </div>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
-
-              {/* Swiper */}
             </div>
-              
+            <div>
+              <div className="py-5 m-auto d-flex justify-content-center align-items-center">
+                {slideData.map((d, index) => (
+                  <div
+                    className={`owl-dot ${
+                      currentSliderIndex == index ? "active" : ""
+                    }`}
+                    onClick={() => goToSlide(index)}
+                  >
+                    <span></span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -114,52 +124,3 @@ const handlePaghinationButton=(index:number)=>{
 }
 
 export default OverView;
-
-// <div className="item">
-//                 <div className="thumb">
-//                   <img src="assets/img/dashboard/22.jpg" alt="Thumb" />
-//                   <a
-//                     href="assets/img/dashboard/22.jpg"
-//                     className="item popup-gallery theme video-play-button"
-//                   >
-//                     <i className="fa fa-plus" />
-//                   </a>
-//                 </div>
-//                 <div className="content">
-//                   <h4>
-//                     <span>01</span> App Integration
-//                   </h4>
-//                 </div>
-//               </div>
-//               <div className="item">
-//                 <div className="thumb">
-//                   <img src="assets/img/dashboard/33.jpg" alt="Thumb" />
-//                   <a
-//                     href="assets/img/dashboard/33.jpg"
-//                     className="item popup-gallery theme video-play-button"
-//                   >
-//                     <i className="fa fa-plus" />
-//                   </a>
-//                 </div>
-//                 <div className="content">
-//                   <h4>
-//                     <span>02</span> App Customization
-//                   </h4>
-//                 </div>
-//               </div>
-//               <div className="item">
-//                 <div className="thumb">
-//                   <img src="assets/img/dashboard/11.jpg" alt="Thumb" />
-//                   <a
-//                     href="assets/img/dashboard/11.jpg"
-//                     className="item popup-gallery theme video-play-button"
-//                   >
-//                     <i className="fa fa-plus" />
-//                   </a>
-//                 </div>
-//                 <div className="content">
-//                   <h4>
-//                     <span>03</span> App Modification
-//                   </h4>
-//                 </div>
-//               </div>

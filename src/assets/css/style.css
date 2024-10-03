@@ -3596,7 +3596,7 @@ body,
 	margin-bottom: -8px;
 }
 
-.overview-area .overview-carousel.owl-carousel .owl-dots .owl-dot span {
+.owl-dot span {
 	display: block;
 	height: 20px;
 	width: 20px;
@@ -3610,7 +3610,7 @@ body,
 	border: 2px solid #e7e7e7;
 }
 
-.overview-area .overview-carousel.owl-carousel .owl-dots .owl-dot.active span::after {
+.owl-dot.active span::after {
 	position: absolute;
 	left: 50%;
 	top: 50%;
