@@ -3550,6 +3550,7 @@ body,
 
 .overview-area .item {
 	position: relative;
+	width: 100%;
 }
 
 .overview-area .item .content {

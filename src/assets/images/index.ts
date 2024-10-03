@@ -24,6 +24,11 @@ export {default as PartnerLogo3} from "./logo/3.png"
 export {default as PartnerLogo4} from "./logo/4.png"
 export {default as PartnerLogo5} from "./logo/5.png"
 
+// OverViewArea
+export {default as SlideImg1} from "./home/dashboard/22.jpg"
+export {default as SlideImg2} from "./home/dashboard/33.jpg"
+export {default as SlideImg3} from "./home/dashboard/11.jpg"
+
 // AboutArea
 export { default as AboutShape } from "./home/aboutArea/9.png";
 export { default as AboutAreaImg } from "./home/aboutArea/16.png";
