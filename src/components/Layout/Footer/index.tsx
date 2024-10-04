@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 
-// Assets
-import { Logo } from "@/assets/images";
+import { LogoLight } from "@/assets/images";
 
-//Constants
-import { contactDetails } from "@/constants";
+import { CONTACT_DETAILS } from "@/constants";
 
 function Footer() {
   return (
@@ -14,7 +12,7 @@ function Footer() {
           <div className="row">
             <div className="col-lg-4 col-md-6 item">
               <div className="f-item about">
-                <img src={Logo} alt="Logo" />
+                <img src={LogoLight} alt="Logo" />
                 <p>
                   Excellence decisively nay man yet impression for contrasted
                   remarkably. There spoke happy for you are out. Fertile how old
@@ -35,7 +33,7 @@ function Footer() {
             </div>
             <div className="col-lg-2 col-md-6 item">
               <div className="f-item link">
-                <h4 className="widget-title">Quick LInk</h4>
+                <h4 className="widget-title">Quick Link</h4>
                 <ul>
                   <li>
                     <Link to="#">
@@ -51,7 +49,7 @@ function Footer() {
 
                   <li>
                     <Link to="#">
-                      <i className="fas fa-angle-right"></i> Compnay History
+                      <i className="fas fa-angle-right"></i> Company History
                     </Link>
                   </li>
 
@@ -117,6 +115,7 @@ function Footer() {
                 </ul>
               </div>
             </div>
+
             <div className="col-lg-3 col-md-6 item">
               <div className="f-item contact-widget">
                 <h4 className="widget-title">Contact Info</h4>
@@ -128,7 +127,7 @@ function Footer() {
                       </div>
                       <div className="content">
                         <strong>Address:</strong>
-                        {contactDetails.address}{" "}
+                        {CONTACT_DETAILS.address}
                       </div>
                     </li>
 
@@ -138,7 +137,9 @@ function Footer() {
                       </div>
                       <div className="content">
                         <strong>Email:</strong>
-                        <Link to="#">{contactDetails.email}</Link>
+                        <a href={`mailto:${CONTACT_DETAILS.email}`}>
+                          {CONTACT_DETAILS.email}
+                        </a>
                       </div>
                     </li>
 
@@ -148,7 +149,9 @@ function Footer() {
                       </div>
                       <div className="content">
                         <strong>Phone:</strong>
-                        <Link to="#">{contactDetails.phone}</Link>
+                        <a href={`tel:${CONTACT_DETAILS.phone}`}>
+                          {CONTACT_DETAILS.phone}
+                        </a>
                       </div>
                     </li>
                   </ul>
@@ -158,13 +161,14 @@ function Footer() {
           </div>
         </div>
       </div>
+
       <div className="footer-bottom">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <p>
                 &copy; Copyright 2024. All Rights Reserved by
-                <Link to="#">validthemes</Link>
+                <a href="https://www.codeshift.az">CodeShift</a>
               </p>
             </div>
             <div className="col-lg-6 text-end link">

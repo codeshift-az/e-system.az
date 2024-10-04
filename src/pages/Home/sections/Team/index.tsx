@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
 
-// Assets
 import {
-  TeamAreaBackground,
-  TeamAreaImg,
-  TeamAreaImg2,
-  TeamAreaImg3,
+  TeamBackground,
+  TeamMemberPhoto1,
+  TeamMemberPhoto2,
+  TeamMemberPhoto3,
 } from "@/assets/images";
 
-function TeamArea() {
+const Team = () => {
   return (
     <div className="team-area bg-gray default-padding bottom-less">
       <div
         className="fixed-shape"
-        style={{ backgroundImage: `url(${TeamAreaBackground})` }}></div>
+        style={{ backgroundImage: `url(${TeamBackground})` }}></div>
       <div className="container">
         <div className="row">
           <div className="col-lg-8 offset-lg-2">
@@ -29,13 +28,14 @@ function TeamArea() {
           </div>
         </div>
       </div>
+
       <div className="container">
         <div className="team-items">
           <div className="row">
             <div className="single-item col-lg-4 col-md-6">
               <div className="item">
                 <div className="thumb">
-                  <img src={TeamAreaImg} alt="Thumb" />
+                  <img src={TeamMemberPhoto1} alt="Thumb" />
                   <div className="social">
                     <input
                       type="checkbox"
@@ -69,7 +69,7 @@ function TeamArea() {
             <div className="single-item col-lg-4 col-md-6">
               <div className="item">
                 <div className="thumb">
-                  <img src={TeamAreaImg2} alt="Thumb" />
+                  <img src={TeamMemberPhoto2} alt="Thumb" />
                   <div className="social">
                     <input
                       type="checkbox"
@@ -105,7 +105,7 @@ function TeamArea() {
             <div className="single-item col-lg-4 col-md-6">
               <div className="item">
                 <div className="thumb">
-                  <img src={TeamAreaImg3} alt="Thumb" />
+                  <img src={TeamMemberPhoto3} alt="Thumb" />
                   <div className="social">
                     <input
                       type="checkbox"
@@ -143,6 +143,6 @@ function TeamArea() {
       </div>
     </div>
   );
-}
+};
 
-export default TeamArea;
+export default Team;

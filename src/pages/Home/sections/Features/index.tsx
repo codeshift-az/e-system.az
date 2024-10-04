@@ -1,23 +1,20 @@
 import { Link } from "react-router-dom";
 
-// Assets
-import { FeaturesBackground, FeaturesShape } from "@/assets/images";
+import { FeaturesBackground1, FeaturesBackground2 } from "@/assets/images";
 
-function Features() {
+const Features = () => {
   return (
-    <div
-      id="features"
-      className="our-features-area default-padding bottom-less">
+    <div className="our-features-area default-padding bottom-less">
       <div
         className="fixed-bg"
-        style={{ backgroundImage: `url(${FeaturesShape})` }}></div>
+        style={{ backgroundImage: `url(${FeaturesBackground2})` }}></div>
       <div className="container">
         <div className="feature-items">
           <div className="row">
             <div className="single-item col-lg-4 col-md-6">
               <div
                 className="item service-banner"
-                style={{ backgroundImage: `url(${FeaturesBackground})` }}>
+                style={{ backgroundImage: `url(${FeaturesBackground1})` }}>
                 <h4>Our Features</h4>
                 <h2>Work smarter with powerful features</h2>
                 <a className="btn circle btn-theme-effect btn-sm" href="#">
@@ -115,6 +112,6 @@ function Features() {
       </div>
     </div>
   );
-}
+};
 
 export default Features;

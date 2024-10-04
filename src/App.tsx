@@ -1,21 +1,11 @@
 import React from "react";
-
-// React Router
-import { Routes, Route } from "react-router-dom";
-
-// i18n
 import { useTranslation } from "react-i18next";
+import { Route, Routes } from "react-router-dom";
 
-// Routes
-import { publicRoutes } from "./routes";
-
-// Middlewares
-import { LanguageMiddleware } from "./routes/middlewares";
-
-// Assets
 import "./assets/css/style.css";
 import "./assets/css/validnavs.css";
-import "../public/assets/css/responsive.css";
+import { publicRoutes } from "./routes";
+import { LanguageMiddleware } from "./routes/middlewares";
 
 const App = () => {
   const { i18n } = useTranslation();

@@ -1,9 +1,9 @@
+// Assets
 import { Link } from "react-router-dom";
 
 // Components
 import Layout from "@/components/Layout";
 
-// Assets
 import { NotFoundBackground } from "@/assets/images";
 
 function NotFound() {

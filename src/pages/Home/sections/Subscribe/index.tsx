@@ -1,7 +1,6 @@
-import { SubscribeShape } from "@/assets/images";
+import { SubscribeBackground } from "@/assets/images";
 
-function SubscribeArea() {
-    
+const Subscribe = () => {
   return (
     <div className="subscribe-area text-center text-light relative">
       <div className="half-bg-top-gray"></div>
@@ -9,7 +8,7 @@ function SubscribeArea() {
         <div className="subscribe-items">
           <i className="flaticon-email"></i>
           <div className="fixed-shape-bottom">
-            <img src={SubscribeShape} alt="Shape" />
+            <img src={SubscribeBackground} alt="Shape" />
           </div>
 
           <div className="row align-center">
@@ -34,6 +33,6 @@ function SubscribeArea() {
       </div>
     </div>
   );
-}
+};
 
-export default SubscribeArea;
+export default Subscribe;

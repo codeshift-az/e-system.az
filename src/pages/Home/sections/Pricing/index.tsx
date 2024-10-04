@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-// Assets
 import { PricingBackground } from "@/assets/images";
 
 function Pricing() {

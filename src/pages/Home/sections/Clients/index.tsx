@@ -1,26 +1,47 @@
-//Swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
-//Swiper
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-// images
-import { 
-    PartnerLogo1, 
-    PartnerLogo2, 
-    PartnerLogo3, 
-    PartnerLogo4, 
-    PartnerLogo5, 
-    
+import {
+  ClientLogo1,
+  ClientLogo2,
+  ClientLogo3,
+  ClientLogo4,
+  ClientLogo5,
 } from "@/assets/images";
-// images
 
+const clients = [
+  ClientLogo1,
+  ClientLogo2,
+  ClientLogo3,
+  ClientLogo4,
+  ClientLogo5,
+];
 
-const partnerLogos:string[]=[PartnerLogo1, PartnerLogo2, PartnerLogo3, PartnerLogo4, PartnerLogo5]
+const Clients = () => {
+  const sliderSettings = {
+    breakpoints: {
+      1024: {
+        slidesPerView: 5,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      320: {
+        slidesPerView: 2,
+      },
+    },
+    autoplay: {
+      delay: 3000,
+    },
+    spaceBetween: 30,
+    freeMode: true,
+    modules: [FreeMode],
+    className: "mySwiper",
+  };
 
-function Clients() {
   return (
     <div className="clients-style-one-area default-padding text-center">
       <div className="container">
@@ -30,35 +51,13 @@ function Clients() {
               <h3>
                 Over <strong>150,000+</strong> client all over the world
               </h3>
-              <div className="">
-              <Swiper
-                    breakpoints={{
-                        1024:{
-                            slidesPerView:5
-                        },
-                        768:{
-                            slidesPerView:3
-                        },
-                        320:{
-                            slidesPerView:2
-                        }
-                    }}
-                    autoplay={{
-                        delay:3000
-                    }}
-                    spaceBetween={30}
-                    freeMode={true}
-                    modules={[FreeMode]}
-                    className="mySwiper"
-                >
-                    {
-                        partnerLogos.map((logo, index)=>(
-                            <SwiperSlide className='p-sm-4 p-2' key={index}>
-                                <img src={logo}  className='' alt={`Partner${index+1}`} />
-                            </SwiperSlide>
-                        ))
-                    }
-
+              <div>
+                <Swiper {...sliderSettings}>
+                  {clients.map((logo, index) => (
+                    <SwiperSlide className="p-sm-4 p-2" key={index}>
+                      <img src={logo} alt={`Partner${index + 1}`} />
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
             </div>
@@ -67,6 +66,6 @@ function Clients() {
       </div>
     </div>
   );
-}
+};
 
 export default Clients;

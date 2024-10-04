@@ -1,6 +1,6 @@
 import Counter from "./Counter";
 
-function FunFactorArea() {
+const FunFactor = () => {
   return (
     <div className="fun-factor-area relative text-light">
       <div className="half-bg-top-gray"></div>
@@ -13,18 +13,21 @@ function FunFactorArea() {
                 <span className="medium">Projects Completed</span>
               </div>
             </div>
+
             <div className="col-lg-3 col-md-6 item">
               <div className="fun-fact">
                 <Counter className="timer" from={0} to={655} speed={5000} />
                 <span className="medium">Active clients</span>
               </div>
             </div>
+
             <div className="col-lg-3 col-md-6 item">
               <div className="fun-fact">
                 <Counter className="timer" from={0} to={450} speed={5000} />
                 <span className="medium">Cups of coffee</span>
               </div>
             </div>
+
             <div className="col-lg-3 col-md-6 item">
               <div className="fun-fact">
                 <Counter className="timer" from={0} to={1200} speed={5000} />
@@ -36,6 +39,6 @@ function FunFactorArea() {
       </div>
     </div>
   );
-}
+};
 
-export default FunFactorArea;
+export default FunFactor;

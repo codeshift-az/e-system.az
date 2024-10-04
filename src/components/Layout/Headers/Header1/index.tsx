@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// Assets
-import { Logo, Logo2 } from "@/assets/images";
+import { Logo, LogoLight } from "@/assets/images";
 
 function Header1() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +25,7 @@ function Header1() {
 
   const onMouse = (index: number) => {
     setSubCategory((prev) =>
-      prev.map((item, i) => (index == i ? !item : item))
+      prev.map((item, i) => (index == i ? !item : item)),
     );
   };
 
@@ -45,8 +44,8 @@ function Header1() {
               <i className="fa fa-bars"></i>
             </button>
             <Link className="navbar-brand" to="/home">
-              <img src={Logo} className="logo logo-display" alt="Logo" />
-              <img src={Logo2} className="logo logo-scrolled" alt="Logo" />
+              <img src={LogoLight} className="logo logo-display" alt="Logo" />
+              <img src={Logo} className="logo logo-scrolled" alt="Logo" />
             </Link>
           </div>
 
@@ -56,7 +55,7 @@ function Header1() {
                 navbar ? `collapse-mobile show` : ``
               } `}
               style={{ animationDuration: "0.3s " }}>
-              <img src={Logo2} alt="Logo" />
+              <img src={Logo} alt="Logo" />
               <button
                 type="button"
                 className="navbar-toggle"

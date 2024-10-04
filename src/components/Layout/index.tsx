@@ -1,10 +1,8 @@
 import { useLocation } from "react-router-dom";
 
-// Components
+import Footer from "./Footer";
 import Header1 from "./Headers/Header1";
 import Header2 from "./Headers/Header2";
-import Footer from "./Footer";
-
 
 interface Props {
   children: React.ReactNode;

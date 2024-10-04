@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
-// framer motion
-import {motion} from 'framer-motion'
 
-// Assets
-import { AboutAreaImg, AboutAreaImg2, AboutShape } from "@/assets/images";
+import { motion } from "framer-motion";
 
-function AboutArea() {
-  
+import {
+  AboutBackground1,
+  AboutBackground2,
+  AboutBackground3,
+} from "@/assets/images";
+
+const About = () => {
   return (
     <div className="about-area bg-gray default-padding">
       <div className="fixed-shape-left">
-        <img src={AboutShape} alt="Shape" />
+        <img src={AboutBackground1} alt="Shape" />
       </div>
 
       <div className="container">
@@ -19,33 +21,32 @@ function AboutArea() {
             <div className="col-lg-6">
               <div className="thumb">
                 <motion.img
-                  initial={{opacity:0,y:200}}
-                  whileInView={{opacity:1, y:0}}
-                  transition={{duration:1}}
-                  viewport={{once:true}}
-                  
+                  initial={{ opacity: 0, y: 200 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1 }}
+                  viewport={{ once: true }}
                   className="wow fadeInLeft"
-                  src={AboutAreaImg}
+                  src={AboutBackground2}
                   alt="Thumb"
                 />
                 <motion.img
-                  initial={{opacity:0,y:200}}
-                  whileInView={{opacity:1, y:0}}
-                  transition={{duration:1}}
-                  viewport={{once:true}}
-
+                  initial={{ opacity: 0, y: 200 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1 }}
+                  viewport={{ once: true }}
                   className="wow fadeInUp"
-                  src={AboutAreaImg2}
+                  src={AboutBackground3}
                   alt="Thumb"
                 />
               </div>
             </div>
 
-            <motion.div className="col-lg-6 info wow fadeInRight"
-              initial={{opacity:0, x:300}}
-              whileInView={{opacity:1, x:0}}
-              viewport={{once:true}}
-              transition={{ duration:1}}
+            <motion.div
+              className="col-lg-6 info wow fadeInRight"
+              initial={{ opacity: 0, x: 300 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
               // animate={{x:300}}
             >
               <h4>Story about us</h4>
@@ -81,6 +82,6 @@ function AboutArea() {
       </div>
     </div>
   );
-}
+};
 
-export default AboutArea;
+export default About;

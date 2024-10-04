@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
-// Assets
-import { ChooseUsAreaImg } from "@/assets/images";
+import { ChooseUsBackground } from "@/assets/images";
 
-function ChooseUsArea() {
-  const progressBarRef = useRef<HTMLDivElement | null>(null);
+const ChooseUs = () => {
   const [width, setWidth] = useState<number>(0);
+  const progressBarRef = useRef<HTMLDivElement | null>(null);
 
   const isInViewport = (element: HTMLElement | null): boolean => {
     if (!element) return false;
@@ -32,7 +31,7 @@ function ChooseUsArea() {
       <div className="container">
         <div className="row align-center">
           <div className="col-lg-6 thumb">
-            <img src={ChooseUsAreaImg} alt="dashboard" />
+            <img src={ChooseUsBackground} alt="dashboard" />
           </div>
 
           <div className="col-lg-6 info">
@@ -82,6 +81,6 @@ function ChooseUsArea() {
       </div>
     </div>
   );
-}
+};
 
-export default ChooseUsArea;
+export default ChooseUs;

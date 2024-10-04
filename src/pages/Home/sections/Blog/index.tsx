@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-// Assets
 import { BlogImg, BlogImg2, BlogImg3 } from "@/assets/images";
 
 function Blog() {
@@ -21,6 +20,7 @@ function Blog() {
           </div>
         </div>
       </div>
+
       <div className="container">
         <div className="row">
           <div className="single-item col-lg-4 col-md-6">

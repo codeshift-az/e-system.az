@@ -1,0 +1,12 @@
+export { default as About } from "./About";
+export { default as Banner } from "./Banner";
+export { default as Blog } from "./Blog";
+export { default as ChooseUs } from "./ChooseUs";
+export { default as Clients } from "./Clients";
+export { default as Features } from "./Features";
+export { default as FunFactor } from "./FunFactor";
+export { default as Overview } from "./Overview";
+export { default as Pricing } from "./Pricing";
+export { default as Subscribe } from "./Subscribe";
+export { default as Team } from "./Team";
+export { default as Testimonials } from "./Testimonials";

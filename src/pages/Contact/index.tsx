@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-// Components
-import { ContactBackground, ContactImg } from "@/assets/images";
-
-// Assets
 import Layout from "@/components/Layout";
 
-//Constants
-import { contactDetails } from "@/constants";
+import { ContactBackground, ContactImg } from "@/assets/images";
+
+import { CONTACT_DETAILS } from "@/constants";
 
 function Contact() {
   const [data, setData] = useState({
@@ -24,7 +21,7 @@ function Contact() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
 
@@ -73,9 +70,9 @@ function Contact() {
                         </div>
                         <div className="info">
                           <h5>Our Email</h5>
-                          <Link to="#">{contactDetails.email}</Link>
+                          <Link to="#">{CONTACT_DETAILS.email}</Link>
                           <br />
-                          <Link to="/">{contactDetails.email}</Link>
+                          <Link to="/">{CONTACT_DETAILS.email}</Link>
                         </div>
                       </li>
 
@@ -98,8 +95,8 @@ function Contact() {
                         </div>
                         <div className="info">
                           <h5>Phone</h5>
-                          <Link to="#">{contactDetails.phone}</Link> <br />
-                          <Link to="#">{contactDetails.phone}</Link>
+                          <Link to="#">{CONTACT_DETAILS.phone}</Link> <br />
+                          <Link to="#">{CONTACT_DETAILS.phone}</Link>
                         </div>
                       </li>
                     </ul>

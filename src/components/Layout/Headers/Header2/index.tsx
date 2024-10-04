@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// Assets
-import { Logo2 } from "@/assets/images";
+import { Logo } from "@/assets/images";
 
 function Header2() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +34,7 @@ function Header2() {
 
   const onMouse = (index: number) => {
     setSubCategory((prev) =>
-      prev.map((item, i) => (index == i ? !item : item))
+      prev.map((item, i) => (index == i ? !item : item)),
     );
   };
 
@@ -55,7 +54,7 @@ function Header2() {
             </button>
 
             <Link className="navbar-brand" to="/">
-              <img src={Logo2} className="logo" alt="Logo" />
+              <img src={Logo} className="logo" alt="Logo" />
             </Link>
           </div>
 
@@ -63,7 +62,7 @@ function Header2() {
             className={`collapse navbar-collapse  ${
               navbar ? `collapse-mobile show` : ``
             } `}>
-            <img src={Logo2} alt="Logo" />
+            <img src={Logo} alt="Logo" />
             <button
               type="button"
               className="navbar-toggle"

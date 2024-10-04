@@ -8,7 +8,5 @@ export const publicRoutes = [
   { path: "/contact", component: <Pages.Contact /> },
 
   // Not Found
-{ path: "/not-found", component: <Pages.NotFound /> },
-
+  { path: "*", component: <Pages.NotFound /> },
 ];
-

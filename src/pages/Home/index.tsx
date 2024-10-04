@@ -1,37 +1,26 @@
-// Sections
-import Layout from "../../components/Layout";
-import About from "./sections/AboutArea";
-import Banner from "./sections/Banner";
-import Blog from "./sections/Blog";
-import ChooseUsArea from "./sections/ChooseUsArea";
-import Clients from "./sections/Clients";
-import Features from "./sections/Features";
-import FunFactorArea from "./sections/FunFactorArea";
-import OverView from "./sections/OverView";
-import Pricing from "./sections/Pricing";
-import SubscribeArea from "./sections/SubscribeArea";
-import TeamArea from "./sections/TeamArea";
-import Testimonials from "./sections/Testimonials";
+import Layout from "@/components/Layout";
 
-function Home() {
+import * as Sections from "./sections";
+
+const Home = () => {
   return (
     <Layout>
       <div className="wrapper">
-        <Banner />
-        <Clients />
-        <About />
-        <SubscribeArea />
-        <Features />
-        <ChooseUsArea />
-        <FunFactorArea />
-        <OverView />
-        <TeamArea />
-        <Pricing />
-        <Testimonials />
-        <Blog />
+        <Sections.Banner />
+        <Sections.Clients />
+        <Sections.About />
+        <Sections.Subscribe />
+        <Sections.Features />
+        <Sections.ChooseUs />
+        <Sections.FunFactor />
+        <Sections.Overview />
+        <Sections.Team />
+        <Sections.Pricing />
+        <Sections.Testimonials />
+        <Sections.Blog />
       </div>
     </Layout>
   );
-}
+};
 
 export default Home;
