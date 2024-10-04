@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+// framer motion
+import {motion} from 'framer-motion'
 
 // Assets
 import { AboutAreaImg, AboutAreaImg2, AboutShape } from "@/assets/images";
 
 function AboutArea() {
+  
   return (
     <div className="about-area bg-gray default-padding">
       <div className="fixed-shape-left">
@@ -15,12 +18,22 @@ function AboutArea() {
           <div className="row align-center">
             <div className="col-lg-6">
               <div className="thumb">
-                <img
+                <motion.img
+                  initial={{opacity:0,y:200}}
+                  whileInView={{opacity:1, y:0}}
+                  transition={{duration:1}}
+                  viewport={{once:true}}
+                  
                   className="wow fadeInLeft"
                   src={AboutAreaImg}
                   alt="Thumb"
                 />
-                <img
+                <motion.img
+                  initial={{opacity:0,y:200}}
+                  whileInView={{opacity:1, y:0}}
+                  transition={{duration:1}}
+                  viewport={{once:true}}
+
                   className="wow fadeInUp"
                   src={AboutAreaImg2}
                   alt="Thumb"
@@ -28,7 +41,13 @@ function AboutArea() {
               </div>
             </div>
 
-            <div className="col-lg-6 info wow fadeInRight">
+            <motion.div className="col-lg-6 info wow fadeInRight"
+              initial={{opacity:0, x:300}}
+              whileInView={{opacity:1, x:0}}
+              viewport={{once:true}}
+              transition={{ duration:1}}
+              // animate={{x:300}}
+            >
               <h4>Story about us</h4>
               <h2>Perfect place to Design, Development, Software.</h2>
               <ul>
@@ -56,7 +75,7 @@ function AboutArea() {
                 </Link>
                 <Link to="/">See all features</Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
