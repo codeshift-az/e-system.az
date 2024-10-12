@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
+// Assets
 import { ChooseUsBackground } from "@/assets/images";
 
 const ChooseUs = () => {
+
+  const { t } = useTranslation("pages", { keyPrefix: "home.chooseUs" });
+
   const [width, setWidth] = useState<number>(0);
   const progressBarRef = useRef<HTMLDivElement | null>(null);
 
@@ -36,25 +41,22 @@ const ChooseUs = () => {
 
           <div className="col-lg-6 info">
             <div className="item-box">
-              <h4>Why Choose us</h4>
+              <h4>{t("slug")}</h4>
               <h2>
-                Create your app page <br /> With expert developer
+              {t("title1")} <br /> {t("title2")}
               </h2>
               <p>
-                Journey greatly or garrets. Draw door kept do so come on open
-                mean. Estimating stimulated how reasonably precaution diminution
-                she simplicity sir but. Questions am sincerity zealously
-                concluded consisted or no gentleman it.
+              {t("description")} 
               </p>
               <ul>
                 <li>
                   <i className="fas fa-layer-group"></i>
-                  <h5>Friendly Interface</h5>
+                  <h5>{t("text1")}</h5>
                 </li>
 
                 <li>
                   <i className="fas fa-fingerprint"></i>
-                  <h5>Strong Encryption</h5>
+                  <h5>{t("text2")}</h5>
                 </li>
               </ul>
 

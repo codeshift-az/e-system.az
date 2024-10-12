@@ -1,9 +1,13 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+// Motion
 import { motion } from "framer-motion";
 
+// Components
 import MotionComponent from "@/components/MotionComponent";
 
+// Assets
 import {
   BannerBackground1,
   BannerBackground2,
@@ -11,6 +15,8 @@ import {
 } from "@/assets/images/index";
 
 const Banner = () => {
+  const { t } = useTranslation("pages", { keyPrefix: "home.banner" });
+
   return (
     <div
       className="banner-area banner-style-three text-light text-default"
@@ -29,7 +35,8 @@ const Banner = () => {
                 transition={{ duration: 1.5 }}
                 className="wow fadeInRight"
                 data-wow-defaul="300ms">
-                We're building software<strong>to manage business</strong>
+                {t("title")}
+                <strong> {t("title2")}</strong>
               </motion.h2>
 
               <motion.p
@@ -39,8 +46,7 @@ const Banner = () => {
                 viewport={{ once: true }}
                 className="wow fadeInLeft"
                 data-wow-delay="500ms">
-                Lasted hunted enough an up seeing in lively letter. Had judgment
-                out opinions property the supplied.
+                {t("description")}
               </motion.p>
 
               <MotionComponent
@@ -51,7 +57,8 @@ const Banner = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 1.5, duration: 1 }}
                 viewport={{ once: true }}>
-                Get Started <i className="fas fa-angle-right"></i>
+                {t("button")}
+                <i className="fas fa-angle-right"></i>
               </MotionComponent>
             </div>
 

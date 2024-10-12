@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
+// Assets
 import { FeaturesBackground1, FeaturesBackground2 } from "@/assets/images";
 
 const Features = () => {
+  const { t } = useTranslation("pages", { keyPrefix: "home.features" });
+
   return (
     <div className="our-features-area default-padding bottom-less">
       <div
@@ -15,8 +18,8 @@ const Features = () => {
               <div
                 className="item service-banner"
                 style={{ backgroundImage: `url(${FeaturesBackground1})` }}>
-                <h4>Our Features</h4>
-                <h2>Work smarter with powerful features</h2>
+                <h4>{t("card1.title")}</h4>
+                <h2>{t("card1.description")}</h2>
                 <a className="btn circle btn-theme-effect btn-sm" href="#">
                   View More
                 </a>
@@ -30,12 +33,9 @@ const Features = () => {
                 </div>
                 <div className="info">
                   <h4>
-                    <a href="#">App Integration</a>
+                    <a href="#">{t("card2.title")}</a>
                   </h4>
-                  <p>
-                    Passage weather as up am exposed. And natural related man
-                    subject eagerness it. concluded consisted or no gentleman.
-                  </p>
+                  <p>{t("card2.description")}</p>
                 </div>
               </div>
             </div>
@@ -47,12 +47,9 @@ const Features = () => {
                 </div>
                 <div className="info">
                   <h4>
-                    <a href="#">Color Schemes</a>
+                    <a href="#">{t("card3.title")}</a>
                   </h4>
-                  <p>
-                    Passage weather as up am exposed. And natural related man
-                    subject eagerness it. concluded consisted or no gentleman.
-                  </p>
+                  <p>{t("card3.description")}</p>
                 </div>
               </div>
             </div>
@@ -64,12 +61,9 @@ const Features = () => {
                 </div>
                 <div className="info">
                   <h4>
-                    <a href="#">High Resolution</a>
+                    <a href="#">{t("card4.title")}</a>
                   </h4>
-                  <p>
-                    Passage weather as up am exposed. And natural related man
-                    subject eagerness it. concluded consisted or no gentleman.
-                  </p>
+                  <p>{t("card4.description")}</p>
                 </div>
               </div>
             </div>
@@ -81,12 +75,9 @@ const Features = () => {
                 </div>
                 <div className="info">
                   <h4>
-                    <Link to="#">Drag And Drop</Link>
+                    <a href="#">{t("card5.title")}</a>
                   </h4>
-                  <p>
-                    Passage weather as up am exposed. And natural related man
-                    subject eagerness it. concluded consisted or no gentleman.
-                  </p>
+                  <p>{t("card5.description")}</p>
                 </div>
               </div>
             </div>
@@ -98,12 +89,9 @@ const Features = () => {
                 </div>
                 <div className="info">
                   <h4>
-                    <Link to="#">Perfect Showcase</Link>
+                    <a href="#">{t("card6.title")}</a>
                   </h4>
-                  <p>
-                    Passage weather as up am exposed. And natural related man
-                    subject eagerness it. concluded consisted or no gentleman.
-                  </p>
+                  <p>{t("card6.description")}</p>
                 </div>
               </div>
             </div>

@@ -1,6 +1,11 @@
+import { useTranslation } from "react-i18next";
+
+// Assets
 import { SubscribeBackground } from "@/assets/images";
 
 const Subscribe = () => {
+  const { t } = useTranslation("pages", { keyPrefix: "home.subscribe" });
+
   return (
     <div className="subscribe-area text-center text-light relative">
       <div className="half-bg-top-gray"></div>
@@ -13,19 +18,20 @@ const Subscribe = () => {
 
           <div className="row align-center">
             <div className="col-lg-8 offset-lg-2">
-              <h2>Signup for a trial</h2>
+              <h2>{t("title")}</h2>
               <p>
-                Create your free account now and get 30 days free trial <br />{" "}
-                No credit card required
+                {t("description")}
+                <br />
+                {t("description2")}
               </p>
               <form action="#">
                 <input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder={t("placeholder")}
                   className="form-control"
                   name="email"
                 />
-                <button type="submit"> Subscribe</button>
+                <button type="submit"> {t("button")}</button>
               </form>
             </div>
           </div>

@@ -1,7 +1,70 @@
 {
   "pages": {
     "home": {
-      "title": "Ana səhifə"
+      "title": "Ana səhifə",
+      "banner":{
+        "title":"E-sistem biznesi idarə etmək üçün",
+        "title2":"proqram təminatı qurur",
+        "description":"ERP sistemi bulud texnologiyası vasitəsilə anbar əməliyyatlarını idarə etmək və optimallaşdırmaq üçün nəzərdə tutulmuş xüsusi proqram həllidir.",
+        "button":"Test edin"
+      },
+      "clients":{
+        "text1":"Bütün biznes sahələrinə",
+        "textStrong":"Professional",
+        "text2":" xidmət gösdəririk"
+      },
+      "about":{
+        "title":"Bizim haqqımızda məlumat"
+      },
+      "subscribe":{
+        "title":"Sınaq üçün qeydiyyat",
+        "description":"E-sistem ilə bağlı maraqlanmaq isdəyirsizsə aşağıda əlaqə məlumatlarınızı qeyd edin və bizə göndərin",
+        "description2":" sizinlə ən qısa zamanda  əlqə saxlanılacaq.",
+        "placeholder":"Əlaqə nömrənizi qeyd edin",
+        "button":"Müraciət"
+      },
+      "features":{
+        "card1":{
+          "title":"Xüsusiyyətlərimiz",
+          "description":"Güclü funksiya ilə daha ağıllı işləyin"
+        },
+        "card2":{
+          "title":"Əlçatan olması",
+          "description":"İnternet bağlantısı olan istənilən cihazdan canlı, real vaxt datasına daxil olun, bu, yolda qərar qəbul etməyə və aktual hesabat verməyə imkan verir"
+        },  
+         "card3":{
+          "title":"Rol əsaslı giriş nəzarəti",
+          "description":"Həssas biznes məlumatlarını qoruyaraq, yalnız səlahiyyətli işçilərin xüsusi modullara və ya məlumatlara daxil olmasını təmin edən təkmilləşdirilmiş təhlükəsizlik xüsusiyyətləri."
+        }, 
+          "card4":{
+          "title":"Sistem Dizaynı",
+          "description":"Bizneslərə ehtiyac duyduqları funksionallığı (məsələn, inventar, mühasibat uçotu, HR, satış) seçmək imkanı verən çevik modullar, ERP sistemini miqyaslana bilən və biznesin böyüməsinə uyğunlaşa bilən edir."
+        },
+        "card5":{
+          "title":"Avtomatlaşdırılmış iş axınları",
+          "description":"Fakturaların yaradılması,işlərin yerinə yetirilməsi və işçilərin gündəlik iş proseslərinin avtomatlaşdırılması, əl ilə müdaxilənin azaldılması və səmərəliliyin artırılması."
+        },   
+        "card6":{
+          "title":"Ölçəklənən Bulud İnfrastruktur",
+          "description":"Artan məlumatları, istifadəçi sayını və artan əməliyyatları idarə edə bilən elastik bulud infrastrukturu, biznes genişləndikcə performansın yüksək qalmasını təmin edir."
+        }
+      },
+      "chooseUs":{
+        "slug":"Niyə Bizi Seçməlisiz",
+        "title1":"Biznesinizi ekspert tərtibatçılar ilə",
+        "title2":"E-sistemə keçid edin",
+        "description":"Biz müxtəlif sənaye sahələrinin üzləşdiyi unikal problemləri başa düşürük. Fərdiləşdirilə bilən modullar və sənayeyə xas xüsusiyyətlərlə bizim ERP sistemimiz istehsal, pərakəndə satış və paylama kimi müxtəlif sektorların xüsusi tələblərinə cavab vermək üçün hazırlanmışdır.",
+        "text1":"İstifadəçi dostu interfeysimiz",
+        "text2":"Güclü Şifrələmə"
+      },
+      "overView":{
+        "title":"E-sistem ilə Tanışlıq",
+        "description":"Sadəlik nəzərə alınmaqla dizayn edilmiş istifadəçi dostu interfeysimiz hətta qeyri-texniki istifadəçilərin də sistemdə asanlıqla naviqasiya edə bilməsini təmin edir, öyrənmə çətinliyini azaldır və təşkilatınız üzrə səmərəliliyi artırır."
+      },
+      "pricing":{
+        "title":"Bizim Paketlər",
+        "description":"E-sistem bulud sistemimiz üçün potensial qiymət paketlərinin xülasəsi buradadır. Bu paketlər çeviklik və miqyaslılığı təmin edərək, müxtəlif biznes ölçüləri və tələblərinə uyğunlaşdırıla bilər:"
+      }
     },
     "notFound": {
       "title": "Səhifə tapılmadı",

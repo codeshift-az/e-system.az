@@ -1,7 +1,70 @@
 {
   "pages": {
     "home": {
-      "title": "Home page"
+      "title": "Home page",
+      "banner":{
+        "title":"E-system builds software",
+        "title2":"to run businesses",
+        "description":"The RP system is a special software solution designed to manage and optimize warehouse operations through cloud technology.",
+        "button":"Test it"
+      },
+      "clients":{
+        "text1":"We provide",
+        "textStrong":"Professional",
+        "text2":" services to all business areas"
+      },
+      "about":{
+        "title":"Information about us"
+      },
+      "subscribe":{
+        "title":"Registration for the trial",
+        "description":"If you want to inquire about the E-system, write down your contact information below and send ",
+        "description2":"it to us and we will get back to you as soon as possible.",
+        "placeholder":"Enter your contact number",
+        "button":"Appeal"
+      },
+      "features":{
+        "card1":{
+          "title":"Our features",
+          "description":"Work smarter with powerful functionality"
+        },
+        "card2":{
+          "title":"Being accessible",
+          "description":"Access live, real-time data from any device with an Internet connection, enabling on-the-go decision-making and up-to-the-minute reporting."
+        },  
+         "card3":{
+          "title":"Role-based access control",
+          "description":"Enhanced security features ensure that only authorized personnel can access specific modules or data, protecting sensitive business data."
+        }, 
+          "card4":{
+          "title":"System design",
+          "description":"Flexible modules that allow businesses to choose the functionality they need (eg, inventory, accounting, HR, sales) make the ERP system scalable and adaptable to business growth."
+        },
+        "card5":{
+          "title":"Automated workflows",
+          "description":"Automating the creation of invoices, tasks and daily work processes of employees, reducing manual intervention and increasing efficiency."
+        },   
+        "card6":{
+          "title":"Scalable Cloud Infrastructure",
+          "description":"An elastic cloud infrastructure that can handle growing data, user numbers and growing operations ensures that performance remains high as the business expands."
+        }
+      },
+      "chooseUs":{
+        "slug":"Why You Should Choose Us",
+        "title1":"Your business with expert developers",
+        "title2":"Switch to E-system",
+        "description":"We understand the unique challenges that different industries face. With customizable modules and industry-specific features, our ERP system is designed to meet the specific requirements of various sectors such as manufacturing, retail and distribution.",
+        "text1":"Our user-friendly interface",
+        "text2":"Strong Encryption"
+      },
+      "overView":{
+        "title":"Introduction to the E-system",
+        "description":"Designed with simplicity in mind, our user-friendly interface ensures that even non-technical users can easily navigate the system, reducing the learning curve and increasing efficiency across your organization."
+      } ,
+      "pricing":{
+        "title":"Our Packages",
+        "description":"Here is a summary of the potential pricing packages for our E-system cloud system. These packages can be tailored to different business sizes and requirements, providing flexibility and scalability:"
+      }
     },
     "notFound": {
       "title": "Page not found",

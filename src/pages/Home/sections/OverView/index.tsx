@@ -1,14 +1,19 @@
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+// Swiper
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// Assets
 import { SlideImg1, SlideImg2, SlideImg3 } from "@/assets/images";
 
 function Overview() {
+  const { t } = useTranslation("pages", { keyPrefix: "home.overView" });
+
   const swiperRef = useRef<any | null>(null);
   const [currentSliderIndex, setCurrentSliderIndex] = useState<number>();
 
@@ -56,13 +61,9 @@ function Overview() {
         <div className="row">
           <div className="col-lg-8 offset-lg-2">
             <div className="site-heading text-center">
-              <h2>Quick Software Overview</h2>
+              <h2>{t("title")}</h2>
               <div className="devider" />
-              <p>
-                Outlived no dwelling denoting in peculiar as he believed.
-                Behaviour excellent middleton be as it curiosity departure
-                ourselves very extreme future.
-              </p>
+              <p>{t("description")}</p>
             </div>
           </div>
         </div>
