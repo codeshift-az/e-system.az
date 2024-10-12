@@ -1,9 +1,13 @@
+import { useTranslation } from "react-i18next";
+
+//Swiper
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// Assets
 import {
   ClientLogo1,
   ClientLogo2,
@@ -21,6 +25,8 @@ const clients = [
 ];
 
 const Clients = () => {
+  const { t } = useTranslation("pages", { keyPrefix: "home.clients" });
+
   const sliderSettings = {
     breakpoints: {
       1024: {
@@ -49,7 +55,8 @@ const Clients = () => {
           <div className="row">
             <div className="col-lg-12">
               <h3>
-                Over <strong>150,000+</strong> client all over the world
+                {t("text1")} <strong>{t("textStrong")}</strong> 
+                {t("text2")}
               </h3>
               <div>
                 <Swiper {...sliderSettings}>

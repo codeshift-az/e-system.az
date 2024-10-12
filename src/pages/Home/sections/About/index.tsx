@@ -1,7 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+
+// Motion
 import { motion } from "framer-motion";
 
+// Assets
 import {
   AboutBackground1,
   AboutBackground2,
@@ -9,6 +13,8 @@ import {
 } from "@/assets/images";
 
 const About = () => {
+  const { t } = useTranslation("pages", { keyPrefix: "home.about" });
+
   return (
     <div className="about-area bg-gray default-padding">
       <div className="fixed-shape-left">
@@ -49,7 +55,7 @@ const About = () => {
               transition={{ duration: 1 }}
               // animate={{x:300}}
             >
-              <h4>Story about us</h4>
+              <h4>{t("title")}</h4>
               <h2>Perfect place to Design, Development, Software.</h2>
               <ul>
                 <li>

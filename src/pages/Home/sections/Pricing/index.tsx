@@ -1,8 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+// Assets
 import { PricingBackground } from "@/assets/images";
 
 function Pricing() {
+  const { t } = useTranslation("pages", { keyPrefix: "home.pricing" });
+
   return (
     <div className="pricing-area bg-dark default-padding bottom-less">
       <div
@@ -12,13 +16,9 @@ function Pricing() {
         <div className="row">
           <div className="col-lg-8 offset-lg-2">
             <div className="site-heading text-center">
-              <h2>Our Packages</h2>
+              <h2>{t("title")}</h2>
               <div className="devider"></div>
-              <p>
-                Outlived no dwelling denoting in peculiar as he believed.
-                Behaviour excellent middleton be as it curiosity departure
-                ourselves very extreme future.
-              </p>
+              <p>{t("description")}</p>
             </div>
           </div>
         </div>
